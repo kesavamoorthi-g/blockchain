@@ -1,11 +1,15 @@
 <div class="row">
   <div class="col-12">
-    <p class="text-green">Wallet Address : {{this.publicAddress}}</p>
-    <button class="btn btn-primary"(click)="onConnect()">Connect</button>
+    <button  class="btn btn-primary"(click)="onConnect(this.metaMask)">Connect</button>
+    <br>
+    <br>
+    <p *ngIf="publicAddress" class="text-green">Wallet Address : {{this.publicAddress}}</p>
   </div>
 </div>
 <div class="row">
   <div class="col-12">
+
+
     <p *ngIf="chainId">Chain Id: {{chainId}}</p>
   </div>
 </div>
@@ -13,6 +17,18 @@
   <div class="col-12">
     <!-- <button class="btn btn-primary"(click)="chan()">Connect</button> -->
 
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+
+    <button class="btn btn-danger"(click)="onDisConnect()">Disconnect</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+
+    <button class="btn btn-success"(click)="changeAccount()">changeAccount</button>
   </div>
 </div>
 
